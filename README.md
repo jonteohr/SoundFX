@@ -5,7 +5,7 @@ This plugin gives your server a more unique feel, with sound effects for differe
 
 You can disable and enable every sound in the configuration file, and soon you will be able to decide what sound you want played all by yourself in the configuration aswell!
 
-Table of Contents |
+Table of Content |
 --- |
 [List of events](#events-that-gives-a-sound-effect) |
 [Permissions](#permissions) |
