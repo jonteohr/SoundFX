@@ -54,6 +54,7 @@ chatSound: true
 
 # Play a sound to the player when a player uses a /tp command
 playerTP: true
+
 # Play a sound when a player respawns
 playerRespawn: false
 
