@@ -1,0 +1,7 @@
+name: SoundFX
+version: 1.2
+author: Condolent
+main: net.condolent.PluginMain
+commands:
+   sfx:
+      description: Base command for everything.

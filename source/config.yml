@@ -1,0 +1,24 @@
+###############################
+#                             #
+#           SoundFX           #
+#                             #
+###############################
+
+# Play a sound to all when player joins.
+playerJoinSound: true
+
+# Play a sound to all when a player quits.
+playerQuitSound: true
+
+# Play sound to all when someone sends a message
+chatSound: true
+
+# Play a sound to the player when a player uses a /tp command
+playerTP: true
+
+# Play a sound when a player respawns
+playerRespawn: false
+
+# Play the respawn sound to all or just the specific player
+# all = all players hear, player = only the respawning player.
+respawnSound: 'player'
