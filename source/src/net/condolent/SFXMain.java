@@ -19,8 +19,6 @@ public class SFXMain extends JavaPlugin {
 		return plugin;
 	}
 	
-	SFXEvents events;
-	
 	public void onEnable() {
 		getLogger().info("SFX enabled!");
 
@@ -51,7 +49,7 @@ public class SFXMain extends JavaPlugin {
 
 		if (cmd.getName().equalsIgnoreCase("sfx")) {
 			
-			if (args.length < 1) {
+			if (args.length < 1 || args.length > 2) {
 				p.sendMessage(sep);
 				p.sendMessage(prefix + ChatColor.RED + "Not enough arguments..");
 				p.sendMessage(prefix + ChatColor.YELLOW + "Correct usage: /sfx <argument>");
@@ -86,35 +84,33 @@ public class SFXMain extends JavaPlugin {
 					p.sendMessage(prefix + "Available effects are: join, quit, respawn, chat, teleport");
 				}
 				
-				if(!args[0].equalsIgnoreCase("reload") && !args[0].equalsIgnoreCase("version") && !args[0].equalsIgnoreCase("info")) {
+				else if(!args[0].equalsIgnoreCase("reload") && !args[0].equalsIgnoreCase("version") && !args[0].equalsIgnoreCase("info")) {
 					p.sendMessage(incorrectArg);
 				}
 				
-			} else if(args.length > 2) {
-				p.sendMessage(incorrectArg);
 			} else if(args.length == 2 && args[0].equalsIgnoreCase("preview")) {
 				
 				if(args[1].equalsIgnoreCase("join")) {
-					p.playSound(location, events.join, 1, 0);
+					p.playSound(location, SFXEvents.join, 1, 0);
 				}
 				
 				if(args[1].equalsIgnoreCase("quit")) {
-					p.playSound(location, events.quit, 1, 0);
+					p.playSound(location, SFXEvents.quit, 1, 0);
 				}
 				
 				if(args[1].equalsIgnoreCase("respawn")) {
-					p.playSound(location, events.respawn, 1, 0);
+					p.playSound(location, SFXEvents.respawn, 1, 0);
 				}
 				
 				if(args[1].equalsIgnoreCase("chat")) {
-					p.playSound(location, events.chat, 1, 0);
+					p.playSound(location, SFXEvents.chat, 1, 0);
 				}
 				
 				if(args[1].equalsIgnoreCase("teleport")) {
-					p.playSound(location, events.tp, 1, 0);
+					p.playSound(location, SFXEvents.tp, 1, 0);
 				}
 				
-				if(!args[1].equalsIgnoreCase("join") && !args[1].equalsIgnoreCase("quit") && !args[1].equalsIgnoreCase("respawn") && !args[1].equalsIgnoreCase("chat") && !args[1].equalsIgnoreCase("teleport")) {
+				else if(!args[1].equalsIgnoreCase("join") && !args[1].equalsIgnoreCase("quit") && !args[1].equalsIgnoreCase("respawn") && !args[1].equalsIgnoreCase("chat") && !args[1].equalsIgnoreCase("teleport")) {
 					p.sendMessage(prefix + ChatColor.RED + "Invalid sound effect.");
 					p.sendMessage(prefix + "Available effects are: join, quit, respawn, chat, teleport");
 				}

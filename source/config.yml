@@ -19,6 +19,6 @@ playerTP: true
 # Play a sound when a player respawns
 playerRespawn: false
 
-# Play the respawn sound to all or just the specific player
+# If playerRespawn is true; play the respawn sound to all or just the specific player
 # all = all players hear, player = only the respawning player.
 respawnSound: 'player'

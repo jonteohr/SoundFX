@@ -11,6 +11,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.event.player.PlayerTeleportEvent;
+import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 
 public class SFXEvents implements Listener {
 
@@ -24,11 +25,11 @@ public class SFXEvents implements Listener {
 		return plugin.getConfig();
 	}
 	
-	public Sound chat = Sound.ENTITY_EXPERIENCE_ORB_PICKUP;
-	public Sound join = Sound.BLOCK_ANVIL_USE;
-	public Sound quit = Sound.BLOCK_ANVIL_HIT;
-	public Sound respawn = Sound.BLOCK_STONE_BUTTON_CLICK_ON;
-	public Sound tp = Sound.BLOCK_PORTAL_TRAVEL;
+	public static Sound chat = Sound.ENTITY_EXPERIENCE_ORB_PICKUP;
+	public static Sound join = Sound.BLOCK_ANVIL_HIT;
+	public static Sound quit = Sound.BLOCK_ANVIL_HIT;
+	public static Sound respawn = Sound.BLOCK_STONE_BUTTON_CLICK_ON;
+	public static Sound tp = Sound.BLOCK_PORTAL_TRAVEL;
 	
 	@EventHandler
 	public void onMsgSound(AsyncPlayerChatEvent e) {
@@ -80,12 +81,15 @@ public class SFXEvents implements Listener {
 	public void onTp(PlayerTeleportEvent e) {
 		Player p = e.getPlayer();
 		
-		if(getConfig().getBoolean("playerTP")) {
-			p.playSound(p.getLocation(), tp, 1, 0);
+		if(e.getCause() == TeleportCause.COMMAND || e.getCause() == TeleportCause.PLUGIN) {
+			if(getConfig().getBoolean("playerTP")) {
+				p.playSound(p.getLocation(), tp, 1, 0);
+			} else {
+				// Do nothing
+			}
 		} else {
 			// Do nothing
 		}
-		
 	}
 	
 	// Play sound on respawn
