@@ -1,5 +1,5 @@
 # SoundFX
-## Description
+### Description
 SoundFX is a plugin for Bukkit. A software running Minecraft servers.  
 This plugin gives your server a more unique feel, with sound effects for different events.
 
