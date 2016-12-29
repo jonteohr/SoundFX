@@ -1,7 +1,7 @@
 name: SoundFX
 version: 1.2
 author: Condolent
-main: net.condolent.PluginMain
+main: net.condolent.SFXMain
 commands:
    sfx:
       description: Base command for everything.
