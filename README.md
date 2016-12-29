@@ -27,7 +27,7 @@ The base command of everything in this plugin is `/sfx`. You can type that and g
 Here's also a list to make it simple:
 
 Command | Description | Access
---- | --- | ---
+--- | --- | :---:
 /sfx | Gives a minor list of all available commands. | All
 /sfx version | Returns the current version of _SoundFX_ the server is running. | All
 /sfx info | Some info about the plugin and it's origin. | All
