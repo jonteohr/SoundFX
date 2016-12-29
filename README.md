@@ -59,7 +59,8 @@ playerRespawn: false
 
 # If playerRespawn is true; play the respawn sound to all or just the specific player
 # all = all players hear, player = only the respawning player.
-respawnSound: 'player'```
+respawnSound: 'player'
+```
 
 ## To-do
 * Option to configure your own sound effect for each event
