@@ -1,1 +1,6 @@
 language: java
+JDK:
+  - oraclejdk8
+  - openjdk8
+script: mvn compile test
+install: true
