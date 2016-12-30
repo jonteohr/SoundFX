@@ -12,6 +12,7 @@ Table of Content |
 [Commands](#commands) |
 [Configuration](#configuration) |
 [To-do list](#to-do) |
+[Useful links](#useful-links) |
 
 ## Events that gives a sound effect
 Currently, there's X total events that you can enable a sound effect for. They are as follows:
@@ -74,3 +75,6 @@ respawnSound: 'player'
 ## To-do
 * Option to configure your own sound effect for each event
 * More events
+
+## Useful links
+* [Spigot](https://www.spigotmc.org/resources/soundfx.33988/)
